@@ -1,5 +1,5 @@
 function fetchData() {
-  const apiUrl = 'http://127.0.0.1:3000/pokemons'
+  const apiUrl = 'http://27.118.27.66/pokemons'
 
   const data = fetch(apiUrl)
     .then((response) => response.json())
@@ -42,7 +42,7 @@ btnSearch.addEventListener('click', async () => {
 const search = async () => {
   try {
     const searchQuery = document.querySelector('.input-search').value
-    const apiUrl = `http://127.0.0.1:3000/pokemons/?search=${encodeURIComponent(
+    const apiUrl = `http://27.118.27.66/pokemons/?search=${encodeURIComponent(
       searchQuery
     )}`
 

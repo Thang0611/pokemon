@@ -4,7 +4,7 @@ const fetchData = async () => {
 
     const id = urlParams.get('id')
 
-    const apiUrl = `http://127.0.0.1:3000/pokemons/${id}`
+    const apiUrl = `http://27.118.27.66/pokemons/${id}`
 
     const response = await fetch(apiUrl)
 
