@@ -86,3 +86,9 @@ function displayResults(data) {
 function redirectToDetailPage(pokemonId) {
   window.location.href = `info.html?id=${pokemonId}`
 }
+
+
+const logo = document.querySelector('.logo')
+logo.addEventListener('click', () => {
+  window.location.reload()
+})

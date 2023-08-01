@@ -70,3 +70,10 @@ showDetail()
 function redirectToDetailPage(pokemonId) {
   window.location.href = `info.html?id=${pokemonId}`
 }
+
+
+
+const logo = document.querySelector('.logo_left')
+logo.addEventListener('click', () => {
+  window.location.href = `home.html`
+})
