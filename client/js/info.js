@@ -4,7 +4,6 @@ const fetchData = async () => {
 
     const id = urlParams.get('id')
 
-
     const apiUrl = `http://127.0.0.1:3000/pokemons/${id}`
 
     const response = await fetch(apiUrl)
@@ -13,7 +12,6 @@ const fetchData = async () => {
 
     return data
   } catch (error) {
-
     console.error('Error fetching data:', error)
   }
 }
@@ -22,7 +20,6 @@ const showDetail = async () => {
   const data = await fetchData()
 
   if (data) {
-
     const name = document.querySelector('.name')
 
     name.innerHTML = data.name
@@ -62,12 +59,14 @@ const showDetail = async () => {
       })
     })
   }
+  else {
+    const info=document.querySelector('.info')
+    info.innerHTML = `<div class="not_found">404  Not Found </div>`
+  }
 }
 
 showDetail()
 
 function redirectToDetailPage(pokemonId) {
-
   window.location.href = `info.html?id=${pokemonId}`
-  
 }

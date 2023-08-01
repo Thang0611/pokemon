@@ -1,11 +1,10 @@
 function fetchData() {
-  // Replace 'API_ENDPOINT' with the actual URL of the API you want to call
   const apiUrl = 'http://127.0.0.1:3000/pokemons'
 
   const data = fetch(apiUrl)
     .then((response) => response.json())
+
     .then((data) => {
-      console.log(data)
       const listItem = document.querySelector('.list-item')
       data.map((pokemon) => {
         const item = document.createElement('div')
@@ -18,10 +17,9 @@ function fetchData() {
         item.appendChild(img)
         item.appendChild(namePokemon)
         listItem.appendChild(item)
-       item.addEventListener('click', (event) => {
-         console.log('click')
-         redirectToDetailPage(pokemon.id)
-       })
+        item.addEventListener('click', () => {
+          redirectToDetailPage(pokemon.id)
+        })
       })
     })
     .catch((error) => {
@@ -33,10 +31,12 @@ fetchData()
 
 const btnSearch = document.querySelector('.btn-search')
 console.log(btnSearch)
+
 btnSearch.addEventListener('click', async () => {
-  console.log(123)
   const data = await search()
+
   console.log(data)
+
   displayResults(data)
 })
 const search = async () => {
@@ -53,7 +53,6 @@ const search = async () => {
     console.error('Error fetching data:', error)
   }
 }
-
 
 function displayResults(data) {
   const searchResultsDiv = document.querySelector('.list-item')
@@ -87,5 +86,3 @@ function displayResults(data) {
 function redirectToDetailPage(pokemonId) {
   window.location.href = `info.html?id=${pokemonId}`
 }
-
-

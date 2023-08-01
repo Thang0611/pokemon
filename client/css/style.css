@@ -115,3 +115,7 @@ font-size: 18px;
 font-weight: 500;
 }
 
+.not_found {
+    margin: 0 auto;
+    font-size: 2rem;
+}
