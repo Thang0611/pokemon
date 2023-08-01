@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #fdf2e9;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.home, .info{
+    margin:  3rem 0;
+    width: 60%;
+    text-align: center;
+}
+
+.search{
+    margin: 2rem 0;
+
+}
+
+.input-search{
+    height: 2.5rem;
+    width: 50%;
+    border-radius: 8px;
+    padding: 0 8px;
+    font-size: 18px;
+}
+
+
+.btn-search{
+    height: 2.5rem;
+    width: 5rem;
+    border: transparent;
+    background-color: #6002a3;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.img{
+    width: 10rem;
+}
+
+.list-item{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* background-color: white; */
+
+}
+
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    flex-direction: column;
+    background-color: #6002a3;
+    border-radius: 1rem;
+    padding: 8px 4px;
+    margin: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+}
+
+.item:hover {
+    transform: scale(1.05);
+
+}
+
+.info-img{
+    width: 20rem;
+    background-color: #4B0082;
+    border-radius: 50%;
+    padding:2rem;
+    margin-bottom: 1rem
+}
+
+.intro, .evolution{
+    text-align: start;
+}
+
+
+.intro p{
+    margin-left: 2rem;
+    margin: 1rem;
+    line-height: 1.6;
+}
+.evolution_cards{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.card{
+    background-color: #4B0082;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.card p {
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+}
+
